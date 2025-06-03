@@ -30,35 +30,35 @@ print(tabela)
 
 # Passo 4: Cadastra 1 produto
 
-for linha in tabela.index:
+for linha in tabela.index: # Para cada linha da tabela
     pyautogui.click(x=673, y=325)
 
     codigo = tabela.loc[linha, "codigo"]
     pyautogui.write(codigo)
 
-    pyautogui.press("tab")
+    pyautogui.press("tab") # Pula para o próximo campo 
     marca = tabela.loc[linha, "marca"]
     pyautogui.write(marca)
 
-    pyautogui.press("tab")
+    pyautogui.press("tab") # Pula para o próximo campo
     tipo = tabela.loc[linha, "tipo"]
     pyautogui.write(tipo)
 
-    pyautogui.press("tab")
+    pyautogui.press("tab") # Pula para o próximo campo
     categoria = str(tabela.loc[linha, "categoria"])
     pyautogui.write(categoria)
 
-    pyautogui.press("tab")
+    pyautogui.press("tab") # Pula para o próximo campo
     preco_unitario = str(tabela.loc[linha, "preco_unitario"])
     pyautogui.write(preco_unitario)
 
-    pyautogui.press("tab")
+    pyautogui.press("tab") # Pula para o próximo campo
     custo = str(tabela.loc[linha, "custo"])
     pyautogui.write(custo)
 
-    pyautogui.press("tab")
+    pyautogui.press("tab") # Pula para o próximo campo
     obs = str(tabela.loc[linha, "obs"])
-    if obs != "nan":
+    if obs != "nan": #verifica se está vazio
         pyautogui.write(obs)
 
     pyautogui.press("tab")
